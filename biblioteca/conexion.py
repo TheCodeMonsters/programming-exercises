@@ -1,15 +1,14 @@
 import mysql.connector as mysql
 
-
 def conectar():
     try:
         conexion = mysql.connect(
-            host='localhost',
+            host='127.0.0.1',
             user='root',
             password='',
-            database='libros'
-        )
+            database='libro'
+            )
         print('Se ha conectado a la base de datos')
         return conexion
     except mysql.Error as err:
-        print('Ha ocurrido un erros', err)
+        print('Ha ocurrido un error', err)
