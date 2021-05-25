@@ -29,5 +29,5 @@ def mostar():
         cursor.execute(sentencia_sql)
         datos = cursor.fetchall()  # aca se biene toda la consulta
         con.close()
-    except sqlite3.Error as err
-    print('Ha ocurrido un error')
+    except sqlite3.Error as err:
+        print('Ha ocurrido un error')
