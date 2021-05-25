@@ -8,7 +8,7 @@ def conectar():
             user='root',
             password='',
             database='libro'
-            )
+        )
         print('Se ha conectado a la base de datos')
         return conexion
     except mysql.Error as err:
