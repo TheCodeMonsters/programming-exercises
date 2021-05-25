@@ -44,12 +44,19 @@ def buscar(id):
     return datos
 
 
-def modificar(titulo, author, estado):
+def modificar(id, campo, nuevo_valor):
     try:
+        sentencia_sql = ''
         con = conectar()
         cursor = con.cursor()
-        sentencia_sql = ''' UPDATE libros SET titulo=%s, author=%s, estado=%s  WHERE id=%s '''
-        datos = (titulo, author, estado, id)
+        if campo == '1':
+            sentencia_sql = ''' UPDATE libros SET titulo=%s WHERE id=%s '''
+        elif campo == '2':
+            sentencia_sql = ''' UPDATE libros SET author=%s WHERE id=%s '''
+        elif campo == '3':
+            sentencia_sql = ''' UPDATE libros SET estado=%s  WHERE id=%s '''
+
+        datos = (nuevo_valor, id)
         cursor.execute(sentencia_sql, datos)
         con.commit()
         con.close()
@@ -63,7 +70,7 @@ def eliminar(id):
         con = conectar()
         cursor = con.cursor()
         sentencia_sql = ''' DELETE FROM libros WHERE id=%s '''
-        cursor.execute(sentencia_sql, (id, ))
+        cursor.execute(sentencia_sql, (id,))
         con.commit()
         con.close()
         return 'Se elimino correctamente'
