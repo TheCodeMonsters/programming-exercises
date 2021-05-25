@@ -1,7 +1,7 @@
 import sqlite3
-from sqlite3.dbapi2 import Cursor
 
-def conectar ():
+
+def conectar():
     try:
         conexion = sqlite3.connect('contactos.db')
         print('Se ha conectado a la base de datos')
@@ -11,16 +11,17 @@ def conectar ():
 
 
 def crear_tabla(conexion):
+
     cursor = conexion.cursor()
-    sentencia_sql = ''' CREATE TABLE IF NO EXISTS contacto(
+    sentencia_sql = ''' CREATE TABLE IF NOT EXISTS contacto(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             nombre TEXT NOT NULL,
             apellidos TEX NOT NULL,
             empresa TEXT NOT NULL,
             telefono TEXT NOT NULL,
             email TEXT NOT NULL,
-            direccion TEXT NOT NULL,
-        )'''
+            direccion TEXT NOT NULL
+    ) '''
 
     cursor.execute(sentencia_sql)
     conexion.commit()
