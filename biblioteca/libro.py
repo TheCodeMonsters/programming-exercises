@@ -7,7 +7,7 @@ def registrar(titulo, author, estado):
     try:
         con = conectar()
         cursor = con.cursor()
-        sentencia_sql = ''' INSERT INTO (titulo, author, estado) VALUES (%s, %s, %s) '''  # %s dice que vamos a psar String
+        sentencia_sql = ''' INSERT INTO libros (titulo, author, estado) VALUES (%s, %s, %s) '''  # %s dice que vamos a psar String
         datos = (titulo, author, estado)  # tupla de los datos
         cursor.execute(sentencia_sql, datos)
         con.commit()
