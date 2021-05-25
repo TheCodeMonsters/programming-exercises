@@ -7,6 +7,8 @@ from tabulate import tabulate
 con = conectar()
 crear_tabla(con)
 
+##############
+
 
 def iniciar():
     os.system('cls')
@@ -23,6 +25,8 @@ def iniciar():
         nuevo_contacto()
     elif opcion == '2':
         ver_contactos()
+    elif opcion == '3':
+        buscar_contacto()
 
 
 def nuevo_contacto():
@@ -37,9 +41,22 @@ def nuevo_contacto():
                           telefono, email, direccion)
     print(respuesta)
 
+##############
+
 
 def ver_contactos():
     datos = mostar()
+    headers = ['ID', 'NOMBRE', 'APELLIDOS',
+               'EMPRESA', 'TELEFONO', 'EMIAL', 'DIRECCIÓN']
+
+    tabla = tabulate(datos, headers, tablefmt='fancy_grid')
+    print(tabla)
+
+
+################################
+def buscar_contacto():
+    id = input('Ingrese el id del contacto')
+    datos = buscar(id)
     headers = ['ID', 'NOMBRE', 'APELLIDOS',
                'EMPRESA', 'TELEFONO', 'EMIAL', 'DIRECCIÓN']
 
