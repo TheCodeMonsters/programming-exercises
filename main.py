@@ -1,7 +1,7 @@
 import os
-import tabulate
 from conexion import *
 from contacto import *
+from tabulate import tabulate
 
 
 con = conectar()
@@ -21,6 +21,8 @@ def iniciar():
 
     if opcion == '1':
         nuevo_contacto()
+    elif opcion == '2':
+        ver_contactos()
 
 
 def nuevo_contacto():
@@ -33,8 +35,16 @@ def nuevo_contacto():
 
     respuesta = registrar(nombre, apellidos, empresa,
                           telefono, email, direccion)
-
     print(respuesta)
+
+
+def ver_contactos():
+    datos = mostar()
+    headers = ['ID', 'NOMBRE', 'APELLIDOS',
+               'EMPRESA', 'TELEFONO', 'EMIAL', 'DIRECCIÓN']
+
+    tabla = tabulate(datos, headers, tablefmt='fancy_grid')
+    print(tabla)
 
 
 iniciar()
