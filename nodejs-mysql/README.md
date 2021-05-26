@@ -1,6 +1,17 @@
 # NodeJs_MySQL
 Aplicación completa con MySQL, NodeJS, ExpressJS, CRUD 
 
+## Install
+```bash
+npm install
+```
+
+## Ejecuta
+
+```bash
+npm run dev
+```
+
 # Base de datos
 
 ```sql
