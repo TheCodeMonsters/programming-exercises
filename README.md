@@ -1,2 +1,2 @@
-# Ejercicios-con-Python-NodeJS
+# Ejercicios- CRUD - con-Python-NodeJS
 :sparkles: Ejercicios de programación con Python y Node JS :rocket:
