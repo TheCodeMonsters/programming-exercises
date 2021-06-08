@@ -6,7 +6,7 @@ def registrar(nombre, apellidos, empresa, telefono, email, direccion):
     try:
         con = conectar()
         cursor = con.cursor()
-        sentencia_sql = ''' INSERT INTO contacto(nombrea, apellidos, empresa, telefono, email, direccion)
+        sentencia_sql = ''' INSERT INTO contacto(nombre, apellidos, empresa, telefono, email, direccion)
                             values(?, ?, ?, ?, ?, ?)  '''
 
         datos = (nombre, apellidos, empresa, telefono,

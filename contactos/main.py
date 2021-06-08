@@ -3,15 +3,12 @@ from conexion import *
 from contacto import *
 from tabulate import tabulate
 
-
 con = conectar()
 crear_tabla(con)
 
+
 ##############
-
-
 def iniciar():
-
     os.system('cls')
     while True:
         print("Seleccione una opción: ")
@@ -38,6 +35,7 @@ def iniciar():
             break
 
 
+# Funcion donde  creamos un nuevo contacto
 def nuevo_contacto():
     nombre = input('Ingrese el nombre')
     apellidos = input('Ingrese el apellido')
@@ -50,9 +48,8 @@ def nuevo_contacto():
                           telefono, email, direccion)
     print(respuesta)
 
+
 ##############
-
-
 def ver_contactos():
     datos = mostar()
     headers = ['ID', 'NOMBRE', 'APELLIDOS',
@@ -72,6 +69,7 @@ def buscar_contacto():
     tabla = tabulate(datos, headers, tablefmt='fancy_grid')
     print(tabla)
 
+
 ############################################
 
 
@@ -87,6 +85,7 @@ def modificar_contacto():
     respuesta = modificar(id, nombre, apellidos, empresa,
                           telefono, email, direccion)
     print(respuesta)
+
 
 ##############
 

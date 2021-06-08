@@ -11,7 +11,6 @@ def conectar():
 
 
 def crear_tabla(conexion):
-
     cursor = conexion.cursor()
     sentencia_sql = ''' CREATE TABLE IF NOT EXISTS contacto(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
