@@ -1,9 +1,17 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
+const conexion = require('../database/db')
 
-router.get('/contacto', (req, res)=>{
-    res.send("Pagina de contacto");
-})
+// Creamos las rutas
+router.get("/", (req, res) => {
+    conexion.query('SELECT * FROM users', (err, results) => {
+        if (err) {
+            throw err;
+        } else {
+            res.send(results);
+        }
+    });
+});
 
-module.exports = router
+module.exports = router;
