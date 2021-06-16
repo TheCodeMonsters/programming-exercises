@@ -10,7 +10,7 @@ app.use('/', require('./routes/router'))
 
 
 // Ponemos el puerto donde se va ejecutar el servidor
-app.listen(9999, ()=>{
+app.listen(9999, () => {
     console.log('Server corriendo en el puerto 9999')
 })
 
