@@ -5,14 +5,14 @@ const conexion = require('../database/db');
 
 // Creamos las rutas
 router.get('/', (req, res) => {
-    res.render('index');
-    // conexion.query('SELECT * FROM users', (err, results) => {
-    //     if (err) {
-    //         throw err;
-    //     } else {
-    //         res.send(results);
-    //     }
-    // });
+    conexion.query('SELECT * FROM users', (err, results) => {
+        if (err) {
+            throw err;
+        } else {
+            // Esto lo renderiza en el front
+            res.render('index', {results:results});
+        }
+    });
 });
 
 module.exports = router;
