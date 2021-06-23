@@ -4,6 +4,8 @@ const router = express.Router();
 const conexion = require('../database/db');
 
 // Creamos las rutas
+
+// Mostrar los registros
 router.get('/', (req, res) => {
     conexion.query('SELECT * FROM users', (err, results) => {
         if (err) {
@@ -14,5 +16,11 @@ router.get('/', (req, res) => {
         }
     });
 });
+
+// Crear registros
+
+router.get('/create', (req, res)=>{
+    res.render('pages/create')
+})
 
 module.exports = router;
