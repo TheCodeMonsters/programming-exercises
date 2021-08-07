@@ -1,0 +1,12 @@
+{{definir "Editar" }}
+  {{plantilla "Encabezado" }}
+    {{template "Menu" }} 
+    < h2 > Editar nombre y ciudad < / h2 >   
+    < form method = "POST" action = "update" > 
+      < input  type = "hidden" name = "uid" value = "{{. Id}} "  / > 
+      < etiqueta > Nombre < / etiqueta > < input  type = " text "nombre = "nombre"valor = "{{}} .Nombre"   / > < br / > 
+      < etiqueta > Ciudad < / etiqueta > < entrada de  tipo = "texto" nombre = "ciudad" valor = "{{}} .City"   / > < br / > 
+      < input  type = "submit" value = "Guardar usuario"  / > 
+    < / form > <br / >    
+  {{plantilla "Pie de página" }}
+{{ fin }}

@@ -1,0 +1,30 @@
+{{definir "Índice" }}
+  {{plantilla "Encabezado" }}
+    {{template "Menu"   }}
+     < h2 > Registrado < / h2 > 
+    < table border = "1" > 
+      < thead > 
+      < tr > 
+        < td > ID < / td > 
+        < td > Nombre < / td > 
+        < td > Ciudad < / td > 
+        < td > Ver </ td > 
+        <td > Editar < / td > 
+        < td > Eliminar < / td > 
+      < / tr > 
+       < / thead > 
+       < tbody > 
+    {{ rango . }}
+       < tr > 
+        < td > {{.Id}} < / td > 
+        < td > {{.Name}} < / td > 
+        < td > {{.City}} <>  
+        < Td > < a href = "/ show? Id = {{}} .ID" > Ver < / a > < / td > 
+        < td > < a href = "/ editar? Id = {{}} .ID " > Editar < / a > < / td > 
+        < td > < a href = "/ delete? id = {{}} .ID" > Eliminar < / a > < td >
+      < / tr>
+    {{ fin }}
+       < / tbody > 
+    < / table > 
+  {{template "Footer" }}
+{{ fin }}
