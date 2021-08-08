@@ -5,8 +5,7 @@ import (
 	"log"
 	"net/http"
 	"text/template"
-
-	_ "github.com/go-sql-driver/mysql"
+	//_ "github.com/go-sql-driver/mysql"
 )
 
 type employee struct {
