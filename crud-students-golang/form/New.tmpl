@@ -1,11 +1,11 @@
-{{definir "Nuevo" }}
-  {{plantilla "Encabezado" }}
-    {{template "Menu" }} 
-    < h2 > Nuevo nombre y ciudad < / h2 >   
-    < form method = "POST" action = "insert" > 
-      < label > Nombre < / label > < input  type = "text" name = " nombrar"  / > < br / > 
-      < etiqueta > City </ etiqueta > <de entrada  de tipo = "texto" nombre = "ciudad"  / > < br / > 
-      < entrada de  tipo = "submit" valor = "Guardar usuario"  / > 
-    < / forma > 
-  {{plantilla "pie de página" }}
-{{ fin }}
+{{ define "New" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>New Name and City</h2>  
+    <form method="POST" action="insert">
+      <label> Name </label><input type="text" name="name" /><br />
+      <label> City </label><input type="text" name="city" /><br />
+      <input type="submit" value="Save user" />
+    </form>
+  {{ template "Footer" }}
+{{ end }}
