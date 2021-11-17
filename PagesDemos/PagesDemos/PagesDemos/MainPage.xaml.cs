@@ -14,5 +14,16 @@ namespace PagesDemos
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new About());
+        }
+
+        private void Profile_Button_Clicked (object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Profile());
+        }
+
     }
 }

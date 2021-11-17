@@ -19,6 +19,17 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+
+        <Button Text="About" Clicked="Button_Clicked">
+              
+        </Button>
+
+
+        <Button Text="Profile" Clicked="Profile_Button_Clicked">
+
+        </Button>
+
+
     </StackLayout>
 
 </ContentPage>
