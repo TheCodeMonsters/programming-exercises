@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "YcNqug1MEqKu+0aa+as/FRyayXAs+7lJQqiVQ07gDvqKyQqdNEYJQSVYU+SUmr2au0JSUIrpufBOjghkdAmjPw==",
+  "success": true,
+  "projectFilePath": "C:\\WorkSpace\\CRUD-programming-exercises\\FirebaseXF\\FirebaseXF.iOS\\FirebaseXF.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Slilma\\.nuget\\packages\\dynamicdata\\7.4.3\\dynamicdata.7.4.3.nupkg.sha512",
+    "C:\\Users\\Slilma\\.nuget\\packages\\reactiveui\\13.3.2\\reactiveui.13.3.2.nupkg.sha512",
+    "C:\\Users\\Slilma\\.nuget\\packages\\sextant\\2.12.4\\sextant.2.12.4.nupkg.sha512",
+    "C:\\Users\\Slilma\\.nuget\\packages\\sextant.xamforms\\2.12.4\\sextant.xamforms.2.12.4.nupkg.sha512",
+    "C:\\Users\\Slilma\\.nuget\\packages\\splat\\11.1.1\\splat.11.1.1.nupkg.sha512",
+    "C:\\Users\\Slilma\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
+    "C:\\Users\\Slilma\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
+    "C:\\Users\\Slilma\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Slilma\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}
