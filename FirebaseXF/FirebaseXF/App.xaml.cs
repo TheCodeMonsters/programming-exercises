@@ -1,8 +1,14 @@
 ﻿using System;
+using FirebaseXF.Managers;
+using FirebaseXF.ViewModels;
+using FirebaseXF.Views;
+using ReactiveUI;
+using Sextant;
+using Sextant.XamForms;
+using Splat;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+using static Sextant.Sextant;
 
 namespace FirebaseXF
 {
@@ -12,22 +18,30 @@ namespace FirebaseXF
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
-        }
+            RxApp.DefaultExceptionHandler = new RxExceptionHandler();
 
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
+            Instance.InitializeForms();
 
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
+            Locator
+                .CurrentMutable
+                .RegisterConstant<IItemManager>(new ItemManager());
 
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+            Locator
+                .CurrentMutable
+                .RegisterNavigationView(() => new NavigationView(RxApp.MainThreadScheduler, RxApp.TaskpoolScheduler, ViewLocator.Current))
+                .RegisterParameterViewStackService()
+                .RegisterView<HomePage, HomeViewModel>()
+                .RegisterView<ItemPage, ItemViewModel>()
+                .RegisterViewModel(() => new HomeViewModel(Locator.Current.GetService<IParameterViewStackService>(), Locator.Current.GetService<IItemManager>()))
+                .RegisterViewModel(() => new ItemViewModel(Locator.Current.GetService<IParameterViewStackService>(), Locator.Current.GetService<IItemManager>()));
+
+            Locator
+                .Current
+                .GetService<IParameterViewStackService>()
+                .PushPage<HomeViewModel>(null, true, false)
+                .Subscribe();
+
+            MainPage = Locator.Current.GetNavigationView("NavigationView");
         }
     }
 }

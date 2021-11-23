@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FirebaseXF.App.xaml", "App.xaml", typeof(global::FirebaseXF.App))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FirebaseXF.App.xaml", "App.xaml", typeof(global::ReactiveToDoSample.App))]
 
-namespace FirebaseXF {
+namespace ReactiveToDoSample {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("App.xaml")]
