@@ -18,12 +18,15 @@ namespace HelloWorld
 
             // Imprimir en consola
             Console.Write("Hello, ");
-            Console.Write( firstName );
-            Console.Write( " " );
-            Console.Write( lastName );
+            Console.Write(firstName);
+            Console.Write(" ");
+            Console.Write(lastName);
             Console.Write(" Tu tienes una edad de: ");
             System.Console.Write(age);
 
+            Console.WriteLine("\nOtra forma de poder concatenar string");
+
+            Console.WriteLine($"Hello, {firstName} {lastName} Tu tienes una edad de: {age}");
 
             // se asegura que el programa no se cerrará inmediatamente después 
             // de ejecutarse
