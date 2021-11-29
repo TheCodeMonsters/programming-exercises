@@ -14,7 +14,7 @@ namespace DemosXF.Android
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.1.99.62")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.1.0.11")]
 	public partial class Resource
 	{
 		
@@ -11596,6 +11596,9 @@ namespace DemosXF.Android
 			
 			// aapt resource value: 0x7F07008F
 			public const int tooltip_frame_light = 2131165327;
+			
+			// aapt resource value: 0x7F070090
+			public const int XamarinLogo = 2131165328;
 			
 			static Drawable()
 			{

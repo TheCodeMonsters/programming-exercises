@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XFApp.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0">
+            
+            <!-- Place new controls here -->
+            <Label Text="Xamarin APP" FontSize="25" Margin="20" Padding="20"
+               VerticalOptions="Start"
+               HorizontalOptions="Center" />
+
+            <Image Source="https://aka.ms/campus.jpg"
+                   Aspect="AspectFill"
+                   HorizontalOptions="Fill" 
+                   />
+
+            <Label Text="Username" FontSize="Medium" />
+            <Entry FontSize="Medium" />
+
+            <Label Text="Password" FontSize="Medium" />
+            <Entry FontSize="Medium" />
+
+            <Button VerticalOptions="End" Text="Entrar" Command="{Binding LoginCommand}"/>
+        
+        </StackLayout>
+            
+    </ContentPage.Content>
+</ContentPage>
