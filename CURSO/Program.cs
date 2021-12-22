@@ -24,14 +24,9 @@ namespace Program
             Avion avion = new Avion();
             avion.aerolinea = "Avianca";
             avion.name = "Juan";
-            avion.ruta = "Europa";
-            avion.scala = "SI";
-
 
             Console.WriteLine("Aerolinea: " + avion.aerolinea);
             Console.WriteLine("Nombre Piloto: " + avion.name);
-            Console.WriteLine("Cual es la Ruta: " + avion.ruta);
-            Console.WriteLine("Tiene escala: " + avion.scala);
             #endregion
 
             #region Piloto
