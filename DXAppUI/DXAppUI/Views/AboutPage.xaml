@@ -38,7 +38,6 @@
                 <StackLayout Orientation="Vertical" Padding="25,15,25,15" Spacing="10">
                     <Label Text="Get the most out of your mobile hardware and OS" FontFamily="Roboto-Bold" FontSize="18" TextColor="{StaticResource NormalText}"/>
                     <Label Text="All Xamarin UI controls are written in Objective-C for iOS and Java/Kotlin for Android and are seamlessly integrated with the Xamarin Forms platform." FontFamily="Roboto" FontSize="16" TextColor="{StaticResource NormalText}"/>
-                    <Label Text="DevExpress UI controls abstract the complexities of native mobile development and deliver unmatched performance, usability, and functionality." FontFamily="Roboto" FontSize="16" TextColor="{StaticResource NormalText}" Padding="0,0,0,7"/>
                 </StackLayout>
             </ScrollView>
             
