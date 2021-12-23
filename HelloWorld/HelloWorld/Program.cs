@@ -11,15 +11,9 @@ namespace HelloWorld
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Cual es tu nombre");
-
-            String name = Console.ReadLine();
-
-            Console.WriteLine("Hola " + name);
-            Console.ReadKey();
-
-            //suma();
-            stringName();
+             //suma();
+            //stringName();
+            manejoString();
 
 
         }
@@ -34,8 +28,15 @@ namespace HelloWorld
             Console.ReadKey();
         }
 
-
-
+        static void manejoString ()
+        {
+            int height = 170;
+            int age = 22;
+            string name = "Carlos Duarte";
+            string information = $"The requested info is:\nUser name: {name} \nUser age: {age} \nUser height: {height}";
+            Console.WriteLine(information);
+        }
+  
 
         static void suma ()
         {
